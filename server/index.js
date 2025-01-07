@@ -8,7 +8,8 @@ app.use(express.static('pixi-test'));
 
 // Define a route for the home page
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/pixi-test/index.html');
+  const filePath = "/home/barry/senior/D2/pixijs/pixi-test/index.html" 
+  res.sendFile(filePath);
 });
 
 app.listen(port, () => {
