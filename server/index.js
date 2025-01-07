@@ -1,11 +1,8 @@
-const mongodb = require('mongo')
-const mongoose = require('mongoose')
+const express = require('express');
+const app = express();
 
-const dbURI = 'mongodb://localhost:27017/pixitest';
+const port = 4000; 
 
-mongoose.connect(dbURI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-  .then(() => console.log('Connected to MongoDB'))
-  .catch(err => console.error('Error connecting to MongoDB:', err));
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
+});
